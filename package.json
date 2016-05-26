@@ -21,7 +21,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "babel-node ./webpack/dev.server.js",
+    "start": "babel-node ./server/dev.server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
