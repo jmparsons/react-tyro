@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "babel": {
-    "presets": ["es2015", "stage-0", "react"],
-    "plugins": ["react-hot-loader/babel"]
-  },
   "dependencies": {
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
