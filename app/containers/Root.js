@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
-import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
-import thunk from 'redux-thunk'
 import App from './App'
+import configureStore from '../store/configureStore';
 
-import * as reducers from '../reducers';
-
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-const reducer = combineReducers(reducers);
-// const store = createStoreWithMiddleware(reducer);
-const store = createStoreWithMiddleware(() => {});
+const store = configureStore();
 
 export default class Root extends Component {
   render() {
