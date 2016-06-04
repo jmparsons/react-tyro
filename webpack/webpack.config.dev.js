@@ -22,11 +22,7 @@ export default {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        exclude: /(node_modules|bower_components)/,
-        query: {
-          presets: ['es2015', 'react']
-        }
+        loader: 'babel'
       }, {
         test: /\.sss$/,
         loader: 'style-loader?sourceMap!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?parser=sugarss'
