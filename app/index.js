@@ -1,24 +1,23 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './containers/App/App';
+import { render } from 'react-dom';
+import Root from './containers/Root';
 
-const rootEl = document.getElementById('root');
-ReactDOM.render(
+render(
   <AppContainer>
-    <App />
+    <Root />
   </AppContainer>,
-  rootEl
+  document.getElementById('root')
 );
 
 if (module.hot) {
-  module.hot.accept('./containers/App/App', () => {
-    const NextApp = require('./containers/App/App').default;
-    ReactDOM.render(
+  module.hot.accept('./containers/Root', () => {
+    const NextRoot = require('./containers/Root').default;
+    render(
       <AppContainer>
-         <NextApp />
+         <NextRoot />
       </AppContainer>,
-      rootEl
+      document.getElementById('root')
     );
   });
 }
