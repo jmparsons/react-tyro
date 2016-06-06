@@ -1,8 +1,5 @@
 {
-  "name": "jmpv4",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "if-env NODE_ENV=production && node run start:prod || npm run start:dev",
     "start:dev": "babel-node ./server/dev",

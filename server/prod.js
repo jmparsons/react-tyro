@@ -16,7 +16,7 @@ const renderPage = (html, initialState) => (
     <head>
       <meta charset="utf-8">
       <link href="/assets/style.css" rel="stylesheet" />
-      <title>JMP Dev</title>
+      <title>react-tyro</title>
     </head>
     <body>
       <div id="root">${html}</div>
