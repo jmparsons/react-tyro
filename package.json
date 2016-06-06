@@ -10,8 +10,9 @@
     "build:client": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --optimize-minimize --optimize-occurence-order --config ./webpack/prod.config.js",
     "build:server": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --config ./webpack/server.config.js",
     "build": "npm run build:client && npm run build:server",
-    "lint": "npm run eslint",
-    "eslint": "eslint app server webpack"
+    "eslint": "eslint app server webpack",
+    "stylelint": "stylelint ./app/**/*.sss --syntax sugarss",
+    "lint": "npm run eslint && npm run stylelint"
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^1.0.1",
@@ -45,6 +46,8 @@
     "precss": "^1.4.0",
     "react-hot-loader": "^3.0.0-beta.1",
     "style-loader": "^0.13.1",
+    "stylelint": "^6.5.1",
+    "stylelint-config-standard": "^8.0.0",
     "sugarss": "^0.1.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
@@ -57,6 +60,12 @@
     ],
     "env": {
       "browser": true
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "declaration-block-trailing-semicolon": null
     }
   },
   "keywords": [],
