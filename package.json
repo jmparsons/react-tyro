@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && node run start:prod || npm run start:dev",
+    "start:dev": "babel-node ./server/dev",
+    "start:prod": "npm run build && node dist/server.bundle.js",
+    "build:client": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --optimize-minimize --optimize-occurence-order --config ./webpack/prod.config.js",
+    "build:server": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --config ./webpack/server.config.js",
+    "build": "npm run build:client && npm run build:server"
+  },
   "dependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "if-env": "^1.0.0",
     "react": "^15.1.0",
     "react-css-modules": "^3.7.6",
     "react-dom": "^15.1.0",
@@ -33,10 +43,6 @@
     "sugarss": "^0.1.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
-  },
-  "scripts": {
-    "start": "babel-node ./server/dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
