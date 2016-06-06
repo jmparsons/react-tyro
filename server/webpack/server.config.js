@@ -8,12 +8,12 @@ import postcssImport from 'postcss-import';
 export default {
   entry: './server/prod',
   output: {
-    path: path.join(__dirname, '..', 'dist'),
+    path: path.resolve(__dirname, '..', '..', 'dist'),
     filename: 'server.bundle.js',
   },
   target: 'node',
   devtool: 'cheap-module-source-map',
-  externals: fs.readdirSync(path.resolve(__dirname, '..', 'node_modules')).concat([
+  externals: fs.readdirSync(path.resolve(__dirname, '..', '..', 'node_modules')).concat([
     'react-dom/server', 'react/addons',
   ]).reduce((ext, mod) => {
     const commonExt = ext;

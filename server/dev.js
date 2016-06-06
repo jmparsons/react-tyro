@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-import config from '../webpack/dev.config';
+import config from './webpack/dev.config';
 
 /* eslint-disable no-console */
 new WebpackDevServer(webpack(config), {

@@ -13,7 +13,7 @@ export default {
     './app/index',
   ],
   output: {
-    path: path.join(__dirname, '..', 'dist'),
+    path: path.resolve(__dirname, '..', '..', 'dist'),
     publicPath: '/assets/',
     filename: 'bundle.js',
   },
@@ -22,6 +22,10 @@ export default {
       {
         test: /\.js$/,
         loader: 'babel',
+        query: {
+          presets: ['react', 'es2015', 'stage-0'],
+          plugins: ['react-hot-loader/babel'],
+        },
       }, {
         test: /\.sss$/,
         loader: 'style-loader?sourceMap!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?parser=sugarss',

@@ -8,7 +8,7 @@ import postcssImport from 'postcss-import';
 export default {
   entry: './app/index',
   output: {
-    path: path.join(__dirname, '..', 'dist'),
+    path: path.resolve(__dirname, '..', '..', 'dist'),
     filename: 'bundle.js',
     publicPath: '/assets/',
   },
