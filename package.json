@@ -9,7 +9,9 @@
     "start:prod": "npm run build && node dist/server.bundle.js",
     "build:client": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --optimize-minimize --optimize-occurence-order --config ./webpack/prod.config.js",
     "build:server": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --config ./webpack/server.config.js",
-    "build": "npm run build:client && npm run build:server"
+    "build": "npm run build:client && npm run build:server",
+    "lint": "npm run eslint",
+    "eslint": "eslint app server webpack"
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^1.0.1",
@@ -31,8 +33,11 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.0.15",
     "css-loader": "^0.23.1",
-    "eslint": "^1.10.3",
-    "eslint-plugin-react": "^3.6.2",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1",
     "postcss": "^5.0.21",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
@@ -43,6 +48,16 @@
     "sugarss": "^0.1.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "plugins": [
+      "react"
+    ],
+    "env": {
+      "browser": true
+    }
   },
   "keywords": [],
   "author": "",

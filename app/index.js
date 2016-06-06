@@ -12,10 +12,11 @@ render(
 
 if (module.hot) {
   module.hot.accept('./containers/Root', () => {
+    /* eslint global-require: "off" */
     const NextRoot = require('./containers/Root').default;
     render(
       <AppContainer>
-         <NextRoot />
+        <NextRoot />
       </AppContainer>,
       document.getElementById('root')
     );

@@ -1,13 +1,11 @@
 import React from 'react';
-import css from 'react-css-modules'
-import styles from './AboutPage.sss'
+import css from 'react-css-modules';
+import styles from './AboutPage.sss';
 
-const AboutPage = () => {
-  return (
-    <div>
-      <h1>About Page</h1>
-    </div>
-  );
-}
+const AboutPage = () => (
+  <div>
+    <h1>About Page</h1>
+  </div>
+);
 
-export default css(AboutPage, styles)
+export default css(AboutPage, styles);
