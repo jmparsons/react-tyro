@@ -22,6 +22,7 @@ export default {
       {
         test: /\.js$/,
         loader: 'babel',
+        include: path.resolve(__dirname, '..', '..', 'app'),
         query: {
           presets: ['react', 'es2015', 'stage-0'],
           plugins: ['react-hot-loader/babel'],

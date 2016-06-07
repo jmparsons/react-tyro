@@ -1,11 +1,17 @@
 import React from 'react';
 import css from 'react-css-modules';
 import styles from './Main.sss';
+import Helmet from 'react-helmet';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const Main = (props) => (
   <div>
+    <Helmet
+      htmlAttributes={{ lang: 'en' }}
+      titleTemplate="%s | React Tyro"
+      defaultTitle="React Tyro"
+    />
     <Header />
     {props.children}
     <Footer />
