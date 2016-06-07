@@ -7,7 +7,7 @@
     "build:client": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --optimize-minimize --optimize-occurence-order --config ./server/webpack/prod.config.js",
     "build:server": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --config ./server/webpack/server.config.js",
     "build": "npm run build:client && npm run build:server",
-    "eslint": "eslint app server webpack",
+    "eslint": "eslint app server",
     "stylelint": "stylelint ./app/**/*.sss --syntax sugarss",
     "lint": "npm run eslint && npm run stylelint"
   },
