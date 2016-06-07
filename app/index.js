@@ -3,11 +3,18 @@ import React from 'react';
 import { render } from 'react-dom';
 import Root from './containers/Root';
 
+const root = document.getElementById('root') || document.createElement('div');
+
+if (root.id !== 'root') {
+  root.id = 'root';
+  document.body.insertBefore(root, document.body.firstChild);
+}
+
 render(
   <AppContainer>
     <Root />
   </AppContainer>,
-  document.getElementById('root')
+  root
 );
 
 if (module.hot) {
@@ -18,7 +25,7 @@ if (module.hot) {
       <AppContainer>
         <NextRoot />
       </AppContainer>,
-      document.getElementById('root')
+      root
     );
   });
 }

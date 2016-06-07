@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import postcssImport from 'postcss-import';
 
 /* eslint-disable max-len */
@@ -14,7 +15,6 @@ export default {
   ],
   output: {
     path: path.resolve(__dirname, '..', '..', 'dist'),
-    publicPath: '/assets/',
     filename: 'bundle.js',
   },
   module: {
@@ -34,6 +34,7 @@ export default {
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   postcss(_webpack) {
