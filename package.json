@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "if-env NODE_ENV=production && node run start:prod || npm run start:dev",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:dev": "babel-node ./server/dev",
     "start:prod": "npm run build && node dist/server.bundle.js",
     "build:client": "babel-node ./node_modules/.bin/webpack --verbose --colors --display-error-details --optimize-minimize --optimize-occurence-order --config ./server/webpack/prod.config.js",
