@@ -12,6 +12,7 @@
     "lint": "npm run eslint && npm run stylelint"
   },
   "dependencies": {
+    "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
     "if-env": "^1.0.0",
     "react": "^15.1.0",
