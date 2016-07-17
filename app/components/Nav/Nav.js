@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 import styles from './Nav.sss';
 
 const Nav = () => (
-  <div>
-    <ul>
+  <div styleName="bg">
+    <ul styleName="nav-list">
       <li><Link to="/">Home</Link></li>
       <li><Link to="/about">About</Link></li>
       <li><Link to="/contact">Contact</Link></li>

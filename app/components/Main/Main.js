@@ -13,7 +13,9 @@ const Main = (props) => (
       defaultTitle="React Tyro"
     />
     <Header />
+    <div styleName="content">
     {props.children}
+    </div>
     <Footer />
   </div>
 );

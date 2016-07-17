@@ -4,7 +4,7 @@ import styles from './Footer.sss';
 
 const Footer = () => (
   <div>
-    <div>Footer</div>
+    <div styleName="content">&copy; 2016 JMParsons</div>
   </div>
 );
 
